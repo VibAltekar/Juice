@@ -193,8 +193,7 @@ if __name__ == '__main__':
     twilaccount_SID = '#####'
     twilaccount_TOKEN = '######'
     twilnumber = "#####"
-    mynumber = "######"
-    #body = request.values.get('Body', None)
-    client = TwilioRestClient(twilaccount_SID, twilaccount_TOKEN)
+    mynumber = "######"3
+    #client = TwilioRestClient(twilaccount_SID, twilaccount_TOKEN)
     v = NutritionCounter()
     print(IP_Address())
