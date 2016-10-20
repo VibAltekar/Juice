@@ -1,4 +1,4 @@
-Whats'up Github Community!
+Hi Github Community!
 
 
 This is basically something I threw together during downtime in my midterm week. Essentially, using an Microcontroller (MCU) like RPi or Intel Edison to connect to a Juicero (definitely a "must buy" when I have more money lol) and update me on my daily carb/fat/protein/caloric intake through text. It starts after I drink my morning fresh juice, and then I can text it back (using twilio) saying I had more protein or fat in a meal, and it will respond saying what percentage of my daily intake I have had so far.
