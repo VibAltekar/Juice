@@ -16,3 +16,8 @@ EXAMPLE OF HOW IT WORKS:
 5. MCU responds "you have consumed more than your daily intake"
 
 Note: Program accounts a little for typos and forgetting to send the amount of carbs/protein etc., because I felt like those would be things I forget or mess up while texting back, if I used this app reguarly. 
+
+TO RUN AT HOME: 
+
+1. comment out the libraries that are not installed (most likely bs4, urrlib, matplotlib, numpy, twilio* and maybe flask) 
+2. run python3 Juicero_Code.py
