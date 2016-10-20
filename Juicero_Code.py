@@ -50,6 +50,7 @@ def IP_Address():
     if IP2 == IPval:
         return True
     return False
+
 #On Intel Edison check if ipconfig is set up and working (tendency to disconnect randomly)
 def IntelEdisonInit():
     if IP_Address() != True:
@@ -61,6 +62,7 @@ def IntelEdisonInit():
     reply = soup.find('span', attrs={'class': 'name'})
     replye = reply.text.strip()
     print(replye)
+
 #attempt to scrape juicero for nutrition information but kept getting 403 error
 #come back to later
 def scraper():
@@ -94,7 +96,7 @@ class NutritionCounter:
     def check(self,nutrition):
         if nutrition[0:4] == "carb" or nutrition[0:3] =="cal" or nutrition[0:3] =="pro" or nutrition[0:3] == "fat":
             return nutrition
-        print("Please enter again\n")
+        print("\nPlease enter again (Carbs or Fat or Protein and the amount)\n")
         #client.messages.create(to = MYNUMBER,from_ = TWILIO_NUMBER, body = "please enter again")
         #textback("please enter again")
         return self.check(input())
@@ -165,27 +167,24 @@ class NutritionCounter:
             inp = input()
             str(inp)
             #IsCorrect()
-            spaceind = inp.find(" ")
-            if spaceind == -1:
-                nutrition = inp
+            nutrition = self.check(inp)
+            space = nutrition.find(" ")
+            if space == -1:
                 x = 1
                 while x == 1:
-                    amount = input()
+                    amount = input("Enter an amount\n")
                     if amount.isdigit() == True:
+                        int(amount)
                         x = 0
                         break
                     else:
-                        print("Please enter an int")
-
+                        print("Please enter an integer\n")
             else:
-                nutrition = (inp[0:spaceind])
-            nutrition = self.check(nutrition)
-            amount = inp[spaceind+1:]
+                amount = nutrition[space+1:]
 
             self.carbs(nutrition,amount)
             self.proteins(nutrition,amount)
             self.fats(nutrition,amount)
-
 
 
 
