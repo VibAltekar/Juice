@@ -20,19 +20,16 @@
 # print statements with function "textback()" with the print string as the parameter
 # which does the twilio function client.message.create()
 import urllib
-import bs4
+import bs4r
 from bs4 import BeautifulSoup
 import requests
 from twilio import twiml
 import os
 import time
 import sys
-import matplotlib
-import numpy
 from twilio.rest import TwilioRestClient
 import socket
-from flask import Flask, request, redirect
-import twilio.twiml
+from flask import Flask, request
 
 # Set up flask server on my own terminal and later on VM to test
 #app = Flask(serverfor_me) then app.run()
