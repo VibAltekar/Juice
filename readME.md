@@ -19,5 +19,5 @@ Note: Program accounts a little for typos and forgetting to send the amount of c
 
 TO RUN AT HOME:
 
-1. comment out the libraries that are not installed (most likely bs4, urrlib, matplotlib, numpy, twilio* and maybe flask)
+1. comment out the libraries that are not installed on the computer that the program is being compiled on (most likely bs4, urrlib, matplotlib, numpy, twilio* and maybe flask)
 2. run python3 Juicero_Code.py
