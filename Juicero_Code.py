@@ -51,10 +51,10 @@ def IP_Address():
         return True
     return False
 
-#On Intel Edison check if ipconfig is set up and working (tendency to disconnect randomly)
-def IntelEdisonInit():
+#On Intel Edison/RPi check if ipconfig is set up and working (tendency to disconnect randomly)
+def IntelEdisonRpiInit():
     if IP_Address() != True:
-        print("Check intel edison connection to server")
+        print("Check intel edison/Rpi connection to server")
     f2 = requests.get("https://localhost:5000/")
     soup = BeautifulSoup(f2.text,"html.parser")
     #scrape responses because of trial Account (NEED TO FIX)
@@ -74,8 +74,7 @@ def scraper():
     return False
 
 
-#class modified slightly for interview to make it command line based incase
-#interviewer wants to test it
+#class modified slightly to make commandline based
 
 class NutritionCounter:
     dailyCarb = 310
