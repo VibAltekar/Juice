@@ -4,8 +4,7 @@ Hi Github Community!
 This is basically something I threw together during downtime in my midterm week. Essentially, using an Microcontroller (MCU) like RPi or Intel Edison to connect to a Juicero (definitely a "must buy" when I have more money lol) and update me on my daily carb/fat/protein/caloric intake through text. It starts after I drink my morning fresh juice, and then I can text it back (using twilio) saying I had more protein or fat in a meal, and it will respond saying what percentage of my daily intake I have had so far.
 I have a twilio trial account so I couldn't manage a lot of phone numbers it, so I chose to upload this CommandLine based program, rather than the SMS based (since it only works with my phone number and has private info to authenticate it). I also barely did this in a few gap hours during a busy week, so hopefully I'll go back and modify this when I have more time. 
 
-Note: This push is the command line edited version, because I have a twilio trial account and was limited on time/resources.
-
+Note: This push is the command line edited version, because I have a twilio trial account, and so only have limited functionality.
 EXAMPLE OF HOW IT WORKS:
 
 1. Microcontroller(MCU) texts "you have drank juice X with 10 grams protein -> 20% of daily intake"
@@ -15,6 +14,7 @@ EXAMPLE OF HOW IT WORKS:
 5. MCU responds "you have consumed more than your daily intake"
 
 Note: Program accounts a little for typos and forgetting to send the amount of carbs/protein etc., because I felt like those would be things I forget or mess up while texting back, if I used this app reguarly.
+Note: Goal is to plot "realtime" consumption of a particular food element (carbs,protein etc) using matplotlib and numpy. 
 
 TO RUN AT HOME:
 
