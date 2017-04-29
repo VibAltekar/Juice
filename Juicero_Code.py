@@ -1,13 +1,4 @@
-# COMMAND LINE VERSION (most texting and server stuff has been replaced
-# with print statements and/or deleted/commented)
-
-# this is just something I threw together during midterms week during my downtime
-# Ideally have an intel edison or RPi connected to the Juicero somehow (I dont have access to juicero API or hardware)
-# Basically a way to tell the user what nutritional information they had in their juice
-# As well as a way to keep texting back to the server updating it with the
-# carbs,protein, calories, and fats consumed at a particular time.
-# The user can essentially know how much of their daily intake of a particular
-# nutritional element they have consumed in that day.
+# COMMAND LINE VERSION 
 
 # EXAMPLE:
 # Microcontroller(MCU) texts "you have drank juice X with 10 grams protein -> 20% of daily intake"
@@ -19,6 +10,10 @@
 # To implement text based system (instead of command line), just replace all
 # print statements with function "textback()" with the print string as the parameter
 # which does the twilio function client.message.create()
+
+
+
+
 import urllib
 import bs4r
 from bs4 import BeautifulSoup
@@ -64,7 +59,6 @@ def IntelEdisonRpiInit():
 #come back to later
 def scraper():
     juices = ["green-zing","just-greens","sweet-greens","spicy-greens","carrot-beat","sweet-roots","beta-glow","root-renewal"]
-
     #r  = requests.get("https://www.juicero.com/the-packs/green-zing/)
     for i in juices:
         url  = requests.get("https://www.juicero.com/the-packs/"+ i + "/")
@@ -78,8 +72,7 @@ class NutritionCounter:
     dailyProtein = 50
     dailyFats = 70
     dailyCalories = 2250
-
-
+    
     def IsCorrect(self):
         print("Is this aspect and value correct? (y/n)")
         inp = input()
